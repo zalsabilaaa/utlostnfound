@@ -5,6 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laporkan Barang Hilang</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* FORM AESTHETIC */
+    .form-section {
+      padding: 60px 20px;
+      background: #f4f6fa;
+    }
+
+    .form-section h2 {
+      color: var(--biru-ut);
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      color: #001e3c;
+      display: block;
+      font-size: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd3df;
+      margin-top: 6px;
+      font-size: 15px;
+      transition: 0.2s;
+      background: #fdfdfd;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--biru-ut);
+      box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.14);
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .laporkan-btn {
+      background: var(--biru-ut);
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 22px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .laporkan-btn:hover {
+      background: #003d80;
+    }
+
+    #preview {
+      margin-top: 15px;
+      border-radius: 10px;
+      width: 160px;
+      display: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+  </style>
+
 </head>
 <body>
 
@@ -26,29 +107,30 @@
     <h2>Form Laporan Barang Hilang / Ditemukan</h2>
 
     <form id="laporForm">
+
       <label>Nama Pelapor</label>
-      <input type="text" id="nama" required>
+      <input type="text" id="nama" placeholder="Masukkan nama lengkap kamu..." required>
 
       <label>Jenis Laporan</label>
       <select id="jenis" required>
-        <option value="">Pilih</option>
+        <option value="">Pilih jenis laporan...</option>
         <option value="hilang">Barang Hilang</option>
         <option value="ditemukan">Barang Ditemukan</option>
       </select>
 
       <label>Nama Barang</label>
-      <input type="text" id="barang" required>
+      <input type="text" id="barang" placeholder="Contoh: Dompet, KTP, Helm..." required>
 
       <label>Lokasi Kejadian</label>
-      <input type="text" id="lokasi" required>
+      <input type="text" id="lokasi" placeholder="Lokasi ditemukan / hilang..." required>
 
       <label>Deskripsi</label>
-      <textarea id="deskripsi" rows="4" required></textarea>
+      <textarea id="deskripsi" rows="4" placeholder="Ceritakan kondisi, ciri-ciri barang, warna, dll..." required></textarea>
 
-      <label>Upload Foto</label>
+      <label>Upload Foto Barang</label>
       <input type="file" id="foto" accept="image/*">
 
-      <img id="preview" style="width:150px;margin-top:10px;display:none;border-radius:8px;">
+      <img id="preview">
 
       <button type="submit" class="laporkan-btn">Kirim Laporan</button>
     </form>
