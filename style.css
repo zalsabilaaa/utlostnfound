@@ -1,0 +1,209 @@
+:root {
+  --biru-ut: #002147; /* Biru tua */
+  --kuning-ut: #ffb800; /* Kuning cerah */
+  --bg-light: #f8f9fa; /* Putih lembut */
+}
+
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: var(--biru-ut);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-section h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* NAVBAR */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--kuning-ut);
+}
+
+.laporkan-btn {
+  background-color: var(--kuning-ut);
+  color: var(--biru-ut);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.laporkan-btn:hover {
+  background-color: white;
+  color: var(--biru-ut);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, var(--biru-ut), #003d80);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-buttons button {
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hilang {
+  background-color: var(--kuning-ut);
+  color: var(--biru-ut);
+}
+
+.ditemukan {
+  background-color: white;
+  color: var(--biru-ut);
+}
+
+.cta-buttons button:hover {
+  opacity: 0.85;
+}
+
+/* SECTION GENERIC */
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* PEMBUKA */
+.intro {
+  background-color: white;
+}
+
+.intro h2 {
+  color: var(--biru-ut);
+  margin-bottom: 15px;
+}
+
+/* VISI MISI */
+.visi-misi {
+  background-color: #eef2f6;
+}
+
+.visi-misi h2 {
+  color: var(--biru-ut);
+  margin-bottom: 30px;
+}
+
+.visi, .misi {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.misi ul {
+  list-style: disc;
+  margin-left: 40px;
+}
+
+/* ABOUT */
+.about h2 {
+  color: var(--biru-ut);
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* KONTAK */
+.contact {
+  background: var(--biru-ut);
+  color: white;
+}
+
+.contact h2 {
+  color: var(--kuning-ut);
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  background-color: #00152d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}

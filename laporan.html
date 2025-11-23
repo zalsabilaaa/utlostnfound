@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporkan Barang Hilang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-section">
+    <img src="logo-ut.png" alt="Logo UT" class="logo">
+    <h1>UT Lost & Found</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="laporan.html" class="active">Laporkan Barang</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="form-section">
+  <div class="container">
+    <h2>Form Laporan Barang Hilang / Ditemukan</h2>
+
+    <form id="laporForm">
+      <label>Nama Pelapor</label>
+      <input type="text" id="nama" required>
+
+      <label>Jenis Laporan</label>
+      <select id="jenis" required>
+        <option value="">Pilih</option>
+        <option value="hilang">Barang Hilang</option>
+        <option value="ditemukan">Barang Ditemukan</option>
+      </select>
+
+      <label>Nama Barang</label>
+      <input type="text" id="barang" required>
+
+      <label>Lokasi Kejadian</label>
+      <input type="text" id="lokasi" required>
+
+      <label>Deskripsi</label>
+      <textarea id="deskripsi" rows="4" required></textarea>
+
+      <label>Upload Foto</label>
+      <input type="file" id="foto" accept="image/*">
+
+      <img id="preview" style="width:150px;margin-top:10px;display:none;border-radius:8px;">
+
+      <button type="submit" class="laporkan-btn">Kirim Laporan</button>
+    </form>
+
+    <p id="notif" style="margin-top:20px; font-weight:600;"></p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
